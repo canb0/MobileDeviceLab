@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 
 import org.openqa.selenium.By;
@@ -17,7 +16,6 @@ import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.automation.testapp.configuration.TestAppConfiguration;
-//com.android.packageinstaller:id/permission_allow_button
 public class BasePageUtil {
 
 	protected RemoteWebDriver driver;
@@ -28,7 +26,6 @@ public class BasePageUtil {
 	
 	public BasePageUtil(RemoteWebDriver driver) {
 		testappConf = TestAppConfiguration.GetInstance();
-		// service = Services.getInstance();
 		this.driver = driver;
 		if (wait == null) {
 			this.wait = new WebDriverWait(driver, 10);

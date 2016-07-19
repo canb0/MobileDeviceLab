@@ -9,7 +9,7 @@ import com.automation.testapp.base.BasePage;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 
-public class MoviePage extends BasePage{
+public class MoviePage extends BasePage {
 
 	private static MoviePage instance;
 	protected static Object lock = new Object();
@@ -28,19 +28,21 @@ public class MoviePage extends BasePage{
 		}
 		return instance;
 	}
-	
-	public void addWatchList(){
+
+	public void addWatchList() {
 		clickElement(By.name("Not in watchlist"), 0);
-		if(findElement(By.name("In watchlist"), 0)!= null)
-				Assert.assertTrue(true);
-		
+		if (findElement(By.name("In watchlist"), 0) != null)
+			Assert.assertTrue(true, "Element cannot be added to watch list");
+
 		goWatchlistPage();
-		
-		Assert.assertTrue(getText(By.id("com.imdb.mobile:id/label"), 0).contains(testappConf.getMovieName()));
+
+		Assert.assertTrue(getText(By.id("com.imdb.mobile:id/label"), 0)
+				.contains(testappConf.getMovieName()),
+				"Movie Name is not what was expected");
 		clickElement(By.name("In watchlist"), 0);
-	
-		if(findElement(By.name("Not in watchlist"), 0)!= null)
-			Assert.assertTrue(true);
+
+		if (findElement(By.name("Not in watchlist"), 0) != null)
+			Assert.assertTrue(true,"Element is removed from Watchlist");
 	}
 
 }

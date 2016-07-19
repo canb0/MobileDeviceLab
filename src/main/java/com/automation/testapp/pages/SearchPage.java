@@ -34,7 +34,7 @@ public class SearchPage extends BasePage {
 
 		clickElement(By.id("com.imdb.mobile:id/image"), 0);
 		Assert.assertTrue(getText(By.id("com.imdb.mobile:id/title"), 0).contains(
-				testappConf.getMovieName()));
+				testappConf.getMovieName()),"Result contains the right movie name");
 		return MoviePage.GetInstance(driver);
 	}
 }
