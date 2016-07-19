@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [RunAll Test]">
+  <test name="RunTest(failed)">
+    <classes>
+      <class name="com.automation.testapp.tests.TestFactory">
+        <methods>
+          <include name="WebDriverQuit"/>
+          <include name="AndroidDriverSet"/>
+          <include name="setClass"/>
+          <include name="addToWatchList"/>
+        </methods>
+      </class> <!-- com.automation.testapp.tests.TestFactory -->
+    </classes>
+  </test> <!-- RunTest(failed) -->
+</suite> <!-- Failed suite [RunAll Test] -->
