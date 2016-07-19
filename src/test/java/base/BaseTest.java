@@ -24,7 +24,7 @@ import com.automation.testapp.pages.HomePage;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 
-@Listeners({ TestObjectTestNGTestResultWatcher.class })
+@Listeners({TestObjectTestNGTestResultWatcher.class})
 public class BaseTest implements RemoteWebDriverProvider {
 
 	protected RemoteWebDriver driver;
@@ -74,11 +74,11 @@ public class BaseTest implements RemoteWebDriverProvider {
 		}
 		}
 		else{
-		capabilities.setCapability("testobject_api_key", "B934163327E64391994877AD2CDA53EA");
-        capabilities.setCapability("testobject_app_id", "1");
-        capabilities.setCapability("testobject_device", "LG_Nexus_4_E960_real");
+		capabilities.setCapability("testobject_api_key", testAppConf.getApikey());
+        capabilities.setCapability("testobject_app_id", testAppConf.getAppid());
+        capabilities.setCapability("testobject_device", testAppConf.getDevice());
         try {
-			driver = new RemoteWebDriver(new URL("http://appium.testobject.com/wd/hub"),
+			driver = new RemoteWebDriver(new URL(testAppConf.getTestobjectURL()),
 					capabilities);
 		} catch (MalformedURLException e) {
 			// TODO Auto-generated catch block

@@ -19,6 +19,11 @@ public class TestAppConfiguration {
 	private String userName;
 	private String password;
 	private String user;
+	private String testobjectURL;
+	private String apikey;
+	private String appid;
+	private String device;
+
 	private TestAppConfiguration() {
 	}
 
@@ -55,6 +60,10 @@ public class TestAppConfiguration {
 		userName = prop.getProperty("userName");
 		password = prop.getProperty("password");
 		user = prop.getProperty("user");
+		testobjectURL= prop.getProperty("testobjectURL");
+		apikey= prop.getProperty("apikey");
+		appid= prop.getProperty("appid");
+		device= prop.getProperty("device");
 	}
 
 	public String getDeviceName() {
@@ -100,9 +109,25 @@ public class TestAppConfiguration {
 	public String getPassword() {
 		return password;
 	}
-	
+
 	public String getUser() {
 		return user;
+	}
+
+	public String getTestobjectURL() {
+		return testobjectURL;
+	}
+
+	public String getApikey() {
+		return apikey;
+	}
+
+	public String getAppid() {
+		return appid;
+	}
+
+	public String getDevice() {
+		return device;
 	}
 
 }

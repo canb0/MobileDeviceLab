@@ -7,8 +7,6 @@
 			<class name="com.automation.testapp.tests.TestFactory" />
 		</classes>
 	</test>
-		
-
 </suite>
 
 
