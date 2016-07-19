@@ -1,25 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="RunAll Test" duration-ms="95852" started-at="2016-07-19T11:41:32Z" finished-at="2016-07-19T11:43:08Z">
+  <suite name="RunAll Test" duration-ms="137509" started-at="2016-07-19T15:32:31Z" finished-at="2016-07-19T15:34:48Z">
     <groups>
     </groups>
-    <test name="RunTest" duration-ms="95852" started-at="2016-07-19T11:41:32Z" finished-at="2016-07-19T11:43:08Z">
+    <test name="RunTest" duration-ms="137509" started-at="2016-07-19T15:32:31Z" finished-at="2016-07-19T15:34:48Z">
       <class name="com.automation.testapp.tests.TestFactory">
-        <test-method status="PASS" signature="AndroidDriverSet()[pri:0, instance:com.automation.testapp.tests.TestFactory@13c78c0b]" name="AndroidDriverSet" is-config="true" duration-ms="380774" started-at="2016-07-19T14:35:11Z" finished-at="2016-07-19T14:41:32Z">
+        <test-method status="PASS" signature="AndroidDriverSet()[pri:0, instance:com.automation.testapp.tests.TestFactory@3bd40a57]" name="AndroidDriverSet" is-config="true" duration-ms="141999" started-at="2016-07-19T18:30:09Z" finished-at="2016-07-19T18:32:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AndroidDriverSet -->
-        <test-method status="PASS" signature="setClass()[pri:0, instance:com.automation.testapp.tests.TestFactory@13c78c0b]" name="setClass" is-config="true" duration-ms="45709" started-at="2016-07-19T14:41:32Z" finished-at="2016-07-19T14:42:18Z">
+        <test-method status="PASS" signature="setClass()[pri:0, instance:com.automation.testapp.tests.TestFactory@3bd40a57]" name="setClass" is-config="true" duration-ms="46874" started-at="2016-07-19T18:32:31Z" finished-at="2016-07-19T18:33:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setClass -->
-        <test-method status="PASS" signature="addToWatchList()[pri:0, instance:com.automation.testapp.tests.TestFactory@13c78c0b]" name="addToWatchList" duration-ms="25822" started-at="2016-07-19T14:42:18Z" finished-at="2016-07-19T14:42:44Z">
+        <test-method status="FAIL" signature="addToWatchList()[pri:0, instance:com.automation.testapp.tests.TestFactory@3bd40a57]" name="addToWatchList" duration-ms="30274" started-at="2016-07-19T18:33:18Z" finished-at="2016-07-19T18:33:48Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Timed out after 10 seconds waiting for presence of any elements located by By.name: Not in watchlist
+Build info: version: '2.50.1', revision: 'd7fc91b29de65b790abb01f3ac5f7ea2191c88a7', time: '2016-01-29 11:11:26'
+System info: host: 'CanberKeytorc', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_91'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities [{app=/tmp/apks-LG_Nexus_5X_real/com.imdb.mobile.apk, networkConnectionEnabled=true, testobject_app_id=1, testobject_test_report_url=https://app.testobject.com/#/canberkakduygu/imdb/appium/executions/64, warnings={}, testobject_device=LG_Nexus_5X_real, testobject_device_session_id={value=bfa6869b-a2dd-44ae-a713-46d666350841}, databaseEnabled=false, deviceName=00defe8a3f9c344a, platform=LINUX, desired={app=/tmp/apks-LG_Nexus_5X_real/com.imdb.mobile.apk, testobject_app_id=1, testobject_device=LG_Nexus_5X_real, testobject_api_key=B934163327E64391994877AD2CDA53EA, platformName=Android, deviceName=LG_Nexus_5X_real}, platformVersion=6.0.1, webStorageEnabled=false, locationContextEnabled=false, browserName=Android, takesScreenshot=true, javascriptEnabled=true, testobject_api_key=B934163327E64391994877AD2CDA53EA, platformName=Android, testobject_test_live_view_url=https://app.testobject.com/#/canberkakduygu/imdb/appium/view/64}]
+Session ID: 5ca8f7f7-e49e-4896-b33e-ec56d0e3bce5]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Timed out after 10 seconds waiting for presence of any elements located by By.name: Not in watchlist
+Build info: version: '2.50.1', revision: 'd7fc91b29de65b790abb01f3ac5f7ea2191c88a7', time: '2016-01-29 11:11:26'
+System info: host: 'CanberKeytorc', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_91'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities [{app=/tmp/apks-LG_Nexus_5X_real/com.imdb.mobile.apk, networkConnectionEnabled=true, testobject_app_id=1, testobject_test_report_url=https://app.testobject.com/#/canberkakduygu/imdb/appium/executions/64, warnings={}, testobject_device=LG_Nexus_5X_real, testobject_device_session_id={value=bfa6869b-a2dd-44ae-a713-46d666350841}, databaseEnabled=false, deviceName=00defe8a3f9c344a, platform=LINUX, desired={app=/tmp/apks-LG_Nexus_5X_real/com.imdb.mobile.apk, testobject_app_id=1, testobject_device=LG_Nexus_5X_real, testobject_api_key=B934163327E64391994877AD2CDA53EA, platformName=Android, deviceName=LG_Nexus_5X_real}, platformVersion=6.0.1, webStorageEnabled=false, locationContextEnabled=false, browserName=Android, takesScreenshot=true, javascriptEnabled=true, testobject_api_key=B934163327E64391994877AD2CDA53EA, platformName=Android, testobject_test_live_view_url=https://app.testobject.com/#/canberkakduygu/imdb/appium/view/64}]
+Session ID: 5ca8f7f7-e49e-4896-b33e-ec56d0e3bce5
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:261)
+	at com.automation.testapp.base.BasePageUtil.waitForVisibility(BasePageUtil.java:41)
+	at com.automation.testapp.base.BasePageUtil.findElement(BasePageUtil.java:58)
+	at com.automation.testapp.base.BasePageUtil.clickElement(BasePageUtil.java:77)
+	at com.automation.testapp.pages.MoviePage.addWatchList(MoviePage.java:33)
+	at com.automation.testapp.tests.TestFactory.addToWatchList(TestFactory.java:29)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addToWatchList -->
-        <test-method status="PASS" signature="WebDriverQuit()[pri:0, instance:com.automation.testapp.tests.TestFactory@13c78c0b]" name="WebDriverQuit" is-config="true" duration-ms="24284" started-at="2016-07-19T14:42:44Z" finished-at="2016-07-19T14:43:08Z">
+        <test-method status="PASS" signature="WebDriverQuit()[pri:0, instance:com.automation.testapp.tests.TestFactory@3bd40a57]" name="WebDriverQuit" is-config="true" duration-ms="25230" started-at="2016-07-19T18:34:23Z" finished-at="2016-07-19T18:34:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- WebDriverQuit -->

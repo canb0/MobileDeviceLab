@@ -27,7 +27,7 @@ import io.appium.java_client.android.AndroidDriver;
 @Listeners({TestObjectTestNGTestResultWatcher.class})
 public class BaseTest implements RemoteWebDriverProvider {
 
-	protected RemoteWebDriver driver;
+	protected static RemoteWebDriver driver;
 	protected static HomePage homePage;
 
 	protected void InitWebDriver() {

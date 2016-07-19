@@ -2,11 +2,12 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <suite name="RunAll Test">
+	<!-- <listeners>
+		<listener class-name="listeners.TestAppTestListener"></listener>
+	</listeners> -->
 	<test name="RunTest" preserve-order="true">
 		<classes>
 			<class name="com.automation.testapp.tests.TestFactory" />
 		</classes>
 	</test>
 </suite>
-
-

@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>RunTest</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Jul 19 14:45:35 EEST 2016</td>
+<td>Started on:</td><td>Tue Jul 19 18:32:31 EEST 2016</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (40 ms)</td>
+<tr><td>Total time:</td><td>137 seconds (137509 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -68,67 +68,56 @@ function toggleAllBoxes() {
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
 <table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.automation.testapp.tests.TestFactory.AndroidDriverSet()'><b>AndroidDriverSet</b><br>Test class: com.automation.testapp.tests.TestFactory</td>
-<td><div><pre>org.openqa.selenium.SessionNotCreatedException: errorId: 6f8ea5c2-d415-4bfe-ac63-8f08bacab37d - Unable to allocate device LG_Nexus_4_E960_real within 900000ms or 3 tries. This can happen if there were no available devices within the time or your plan&apos;s max concurrent test run is not corresponding to your usage
-Build info: version: &apos;unknown&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
-System info: host: &apos;a895cd73b39c&apos;, ip: &apos;172.17.0.4&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;4.2.0-35-generic&apos;, java.version: &apos;1.8.0_91&apos;
-Driver info: driver.version: unknown
-Command duration or timeout: 913.64 seconds
+<td title='com.automation.testapp.tests.TestFactory.addToWatchList()'><b>addToWatchList</b><br>Test class: com.automation.testapp.tests.TestFactory</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Timed out after 10 seconds waiting for presence of any elements located by By.name: Not in watchlist
 Build info: version: &apos;2.50.1&apos;, revision: &apos;d7fc91b29de65b790abb01f3ac5f7ea2191c88a7&apos;, time: &apos;2016-01-29 11:11:26&apos;
 System info: host: &apos;CanberKeytorc&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_91&apos;
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:249)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:158)
-	at base.BaseTest.setup(BaseTest.java:82)
-	at base.BaseTest.AndroidDriverSet(BaseTest.java:42)
-Caused by: org.openqa.selenium.SessionNotCreatedException: errorId: 6f8ea5c2-d415-4bfe-ac63-8f08bacab37d - Unable to allocate device LG_Nexus_4_E960_real within 900000ms or 3 tries. This can happen if there were no available devices within the time or your plan&apos;s max concurrent test run is not corresponding to your usage
-Build info: version: &apos;unknown&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
-System info: host: &apos;a895cd73b39c&apos;, ip: &apos;172.17.0.4&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;4.2.0-35-generic&apos;, java.version: &apos;1.8.0_91&apos;
-Driver info: driver.version: unknown
-Build info: version: &apos;2.50.1&apos;, revision: &apos;d7fc91b29de65b790abb01f3ac5f7ea2191c88a7&apos;, time: &apos;2016-01-29 11:11:26&apos;
-System info: host: &apos;CanberKeytorc&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_91&apos;
-Driver info: driver.version: unknown
-... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace607207372", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace607207372'><pre>org.openqa.selenium.SessionNotCreatedException: errorId: 6f8ea5c2-d415-4bfe-ac63-8f08bacab37d - Unable to allocate device LG_Nexus_4_E960_real within 900000ms or 3 tries. This can happen if there were no available devices within the time or your plan&apos;s max concurrent test run is not corresponding to your usage
-Build info: version: &apos;unknown&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
-System info: host: &apos;a895cd73b39c&apos;, ip: &apos;172.17.0.4&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;4.2.0-35-generic&apos;, java.version: &apos;1.8.0_91&apos;
-Driver info: driver.version: unknown
-Command duration or timeout: 913.64 seconds
+Capabilities [{app=/tmp/apks-LG_Nexus_5X_real/com.imdb.mobile.apk, networkConnectionEnabled=true, testobject_app_id=1, testobject_test_report_url=https://app.testobject.com/#/canberkakduygu/imdb/appium/executions/64, warnings={}, testobject_device=LG_Nexus_5X_real, testobject_device_session_id={value=bfa6869b-a2dd-44ae-a713-46d666350841}, databaseEnabled=false, deviceName=00defe8a3f9c344a, platform=LINUX, desired={app=/tmp/apks-LG_Nexus_5X_real/com.imdb.mobile.apk, testobject_app_id=1, testobject_device=LG_Nexus_5X_real, testobject_api_key=B934163327E64391994877AD2CDA53EA, platformName=Android, deviceName=LG_Nexus_5X_real}, platformVersion=6.0.1, webStorageEnabled=false, locationContextEnabled=false, browserName=Android, takesScreenshot=true, javascriptEnabled=true, testobject_api_key=B934163327E64391994877AD2CDA53EA, platformName=Android, testobject_test_live_view_url=https://app.testobject.com/#/canberkakduygu/imdb/appium/view/64}]
+Session ID: 5ca8f7f7-e49e-4896-b33e-ec56d0e3bce5
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:261)
+	at com.automation.testapp.base.BasePageUtil.waitForVisibility(BasePageUtil.java:41)
+	at com.automation.testapp.base.BasePageUtil.findElement(BasePageUtil.java:58)
+	at com.automation.testapp.base.BasePageUtil.clickElement(BasePageUtil.java:77)
+	at com.automation.testapp.pages.MoviePage.addWatchList(MoviePage.java:33)
+	at com.automation.testapp.tests.TestFactory.addToWatchList(TestFactory.java:29)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1487230025", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1487230025'><pre>org.openqa.selenium.TimeoutException: Timed out after 10 seconds waiting for presence of any elements located by By.name: Not in watchlist
 Build info: version: &apos;2.50.1&apos;, revision: &apos;d7fc91b29de65b790abb01f3ac5f7ea2191c88a7&apos;, time: &apos;2016-01-29 11:11:26&apos;
 System info: host: &apos;CanberKeytorc&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_91&apos;
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:249)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:158)
-	at base.BaseTest.setup(BaseTest.java:82)
-	at base.BaseTest.AndroidDriverSet(BaseTest.java:42)
+Capabilities [{app=/tmp/apks-LG_Nexus_5X_real/com.imdb.mobile.apk, networkConnectionEnabled=true, testobject_app_id=1, testobject_test_report_url=https://app.testobject.com/#/canberkakduygu/imdb/appium/executions/64, warnings={}, testobject_device=LG_Nexus_5X_real, testobject_device_session_id={value=bfa6869b-a2dd-44ae-a713-46d666350841}, databaseEnabled=false, deviceName=00defe8a3f9c344a, platform=LINUX, desired={app=/tmp/apks-LG_Nexus_5X_real/com.imdb.mobile.apk, testobject_app_id=1, testobject_device=LG_Nexus_5X_real, testobject_api_key=B934163327E64391994877AD2CDA53EA, platformName=Android, deviceName=LG_Nexus_5X_real}, platformVersion=6.0.1, webStorageEnabled=false, locationContextEnabled=false, browserName=Android, takesScreenshot=true, javascriptEnabled=true, testobject_api_key=B934163327E64391994877AD2CDA53EA, platformName=Android, testobject_test_live_view_url=https://app.testobject.com/#/canberkakduygu/imdb/appium/view/64}]
+Session ID: 5ca8f7f7-e49e-4896-b33e-ec56d0e3bce5
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:261)
+	at com.automation.testapp.base.BasePageUtil.waitForVisibility(BasePageUtil.java:41)
+	at com.automation.testapp.base.BasePageUtil.findElement(BasePageUtil.java:58)
+	at com.automation.testapp.base.BasePageUtil.clickElement(BasePageUtil.java:77)
+	at com.automation.testapp.pages.MoviePage.addWatchList(MoviePage.java:33)
+	at com.automation.testapp.tests.TestFactory.addToWatchList(TestFactory.java:29)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:277)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
 	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
 	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
 	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
@@ -138,29 +127,9 @@ Driver info: org.openqa.selenium.remote.RemoteWebDriver
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-Caused by: org.openqa.selenium.SessionNotCreatedException: errorId: 6f8ea5c2-d415-4bfe-ac63-8f08bacab37d - Unable to allocate device LG_Nexus_4_E960_real within 900000ms or 3 tries. This can happen if there were no available devices within the time or your plan&apos;s max concurrent test run is not corresponding to your usage
-Build info: version: &apos;unknown&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
-System info: host: &apos;a895cd73b39c&apos;, ip: &apos;172.17.0.4&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;4.2.0-35-generic&apos;, java.version: &apos;1.8.0_91&apos;
-Driver info: driver.version: unknown
-Build info: version: &apos;2.50.1&apos;, revision: &apos;d7fc91b29de65b790abb01f3ac5f7ea2191c88a7&apos;, time: &apos;2016-01-29 11:11:26&apos;
-System info: host: &apos;CanberKeytorc&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_91&apos;
-Driver info: driver.version: unknown
 </pre></div></td>
-<td>0</td>
-<td>null</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.automation.testapp.tests.TestFactory.setClass()'><b>setClass</b><br>Test class: com.automation.testapp.tests.TestFactory</td>
-<td></td>
-<td>0</td>
-<td>null</td></tr>
+<td>30</td>
+<td>com.automation.testapp.tests.TestFactory@3bd40a57</td></tr>
 </table><p>
 </body>
 </html>
