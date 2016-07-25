@@ -1,10 +1,13 @@
 package com.automation.testapp.tests;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+
 import com.automation.testapp.pages.HomePage;
 import com.automation.testapp.pages.LoginPage;
 import com.automation.testapp.pages.MoviePage;
 import com.automation.testapp.pages.SearchPage;
+import com.automation.testapp.pages.WatchListPage;
+
 import base.BaseTest;
 
 public class TestFactory extends BaseTest{
@@ -13,6 +16,7 @@ public class TestFactory extends BaseTest{
 	LoginPage loginPage = null;
 	SearchPage searchPage = null;
 	MoviePage moviePage = null;
+	WatchListPage watchListPage = null;
 	
 	@BeforeTest
 	public void setClass(){
@@ -26,6 +30,7 @@ public class TestFactory extends BaseTest{
 	public void addToWatchList(){
 		 searchPage = homePage.searchMovie();
 		 moviePage  = searchPage.selectAMovie();
-		 moviePage.addWatchList();
+		 watchListPage = moviePage.addWatchList();
+		 watchListPage.check_if_movieIsValid_And_CleanData();
 	}
 }

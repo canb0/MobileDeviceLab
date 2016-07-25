@@ -29,20 +29,14 @@ public class MoviePage extends BasePage {
 		return instance;
 	}
 
-	public void addWatchList() {
+	public WatchListPage addWatchList() {
 		clickElement(By.name("Not in watchlist"), 0);
 		if (findElement(By.name("In watchlist"), 0) != null)
-			Assert.assertTrue(true, "Element cannot be added to watch list");
-
-		goWatchlistPage();
-
-		Assert.assertTrue(getText(By.id("com.imdb.mobile:id/label"), 0)
-				.contains(testappConf.getMovieName()),
-				"Movie Name is not what was expected");
-		clickElement(By.name("In watchlist"), 0);
-
-		if (findElement(By.name("Not in watchlist"), 0) != null)
-			Assert.assertTrue(true,"Element is removed from Watchlist");
+			Assert.assertTrue(true, "Element is added to watch list");
+		else
+			Assert.assertTrue(false,"Element is added to watch list");
+		return WatchListPage.GetInstance(driver);
+		
 	}
 
 }
