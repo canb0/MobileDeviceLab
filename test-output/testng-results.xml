@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="RunAll Test" duration-ms="66547" started-at="2016-07-19T21:02:09Z" finished-at="2016-07-19T21:03:16Z">
+  <suite name="RunAll Test" duration-ms="69394" started-at="2016-07-25T13:18:03Z" finished-at="2016-07-25T13:19:12Z">
     <groups>
     </groups>
-    <test name="RunTest" duration-ms="66547" started-at="2016-07-19T21:02:09Z" finished-at="2016-07-19T21:03:16Z">
+    <test name="RunTest" duration-ms="69394" started-at="2016-07-25T13:18:03Z" finished-at="2016-07-25T13:19:12Z">
       <class name="com.automation.testapp.tests.TestFactory">
-        <test-method status="PASS" signature="AndroidDriverSet()[pri:0, instance:com.automation.testapp.tests.TestFactory@13c78c0b]" name="AndroidDriverSet" is-config="true" duration-ms="67136" started-at="2016-07-20T00:01:02Z" finished-at="2016-07-20T00:02:09Z">
+        <test-method status="PASS" signature="AndroidDriverSet()[pri:0, instance:com.automation.testapp.tests.TestFactory@13c78c0b]" name="AndroidDriverSet" is-config="true" duration-ms="62556" started-at="2016-07-25T16:17:00Z" finished-at="2016-07-25T16:18:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AndroidDriverSet -->
-        <test-method status="PASS" signature="setClass()[pri:0, instance:com.automation.testapp.tests.TestFactory@13c78c0b]" name="setClass" is-config="true" duration-ms="33782" started-at="2016-07-20T00:02:09Z" finished-at="2016-07-20T00:02:43Z">
+        <test-method status="PASS" signature="setClass()[pri:0, instance:com.automation.testapp.tests.TestFactory@13c78c0b]" name="setClass" is-config="true" duration-ms="35136" started-at="2016-07-25T16:18:03Z" finished-at="2016-07-25T16:18:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setClass -->
-        <test-method status="PASS" signature="addToWatchList()[pri:0, instance:com.automation.testapp.tests.TestFactory@13c78c0b]" name="addToWatchList" duration-ms="31261" started-at="2016-07-20T00:02:43Z" finished-at="2016-07-20T00:03:14Z">
+        <test-method status="PASS" signature="addToWatchList()[pri:0, instance:com.automation.testapp.tests.TestFactory@13c78c0b]" name="addToWatchList" duration-ms="32867" started-at="2016-07-25T16:18:38Z" finished-at="2016-07-25T16:19:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addToWatchList -->
-        <test-method status="PASS" signature="WebDriverQuit()[pri:0, instance:com.automation.testapp.tests.TestFactory@13c78c0b]" name="WebDriverQuit" is-config="true" duration-ms="1470" started-at="2016-07-20T00:03:14Z" finished-at="2016-07-20T00:03:16Z">
+        <test-method status="PASS" signature="WebDriverQuit()[pri:0, instance:com.automation.testapp.tests.TestFactory@13c78c0b]" name="WebDriverQuit" is-config="true" duration-ms="1356" started-at="2016-07-25T16:19:11Z" finished-at="2016-07-25T16:19:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- WebDriverQuit -->
