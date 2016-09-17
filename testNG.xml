@@ -1,11 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="RunAll Test">
-	<!-- <listeners>
-		<listener class-name="listeners.TestAppTestListener"></listener>
-	</listeners> -->
-	<test name="RunTest" preserve-order="true">
+<suite name="RunAll Test" parallel="tests" thread-count="3">
+
+	<test name="Test-Nexus">
+		<parameter name="browserName" value="Chrome" />
+		<parameter name="platform" value="Android" />
+		<parameter name="deviceName_" value="ZX1G523QQF" />
+		<parameter name="version" value="6.0.1" />
+		<classes>
+			<class name="com.automation.testapp.tests.TestFactory" />
+		</classes>
+	</test>
+	
+	<test name="Test-Samsung">
+		<parameter name="browserName" value="Chrome" />
+		<parameter name="platform" value="Android" />
+		<parameter name="deviceName_" value="004f0435" />
+		<parameter name="version" value="4.4.2" />
+		<classes>
+			<class name="com.automation.testapp.tests.TestFactory" />
+		</classes>
+	</test>
+	
+	<test name="Test-Huaweii">
+		<parameter name="browserName" value="Chrome" />
+		<parameter name="platform" value="Android" />
+		<parameter name="deviceName_" value="021YHB2133086676" />
+		<parameter name="version" value="5.1" />
 		<classes>
 			<class name="com.automation.testapp.tests.TestFactory" />
 		</classes>

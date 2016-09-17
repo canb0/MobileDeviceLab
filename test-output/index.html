@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-RunAll_Test">
-              <span class="suite-name border-passed">RunAll Test</span>
+              <span class="suite-name border-skipped">RunAll Test</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -53,7 +53,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="testlist-RunAll_Test">
-                    <span class="test-stats">1 test</span>
+                    <span class="test-stats">2 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,7 +90,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,  1 skipped,  1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-RunAll_Test" class="hide-methods skipped suite-RunAll_Test"> (hide)</a> <!-- hide-methods skipped suite-RunAll_Test -->
+                      <a href="#" panel-name="suite-RunAll_Test" class="show-methods skipped suite-RunAll_Test"> (show)</a> <!-- show-methods skipped suite-RunAll_Test -->
+                    </span>
+                    <div class="method-list-content skipped suite-RunAll_Test">
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-RunAll_Test" title="com.automation.testapp.tests.TestFactory" hash-for-method="addToWatchList">addToWatchList</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-RunAll_Test -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -116,6 +130,21 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-RunAll_Test" class="panel RunAll_Test">
+          <div class="suite-RunAll_Test-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">com.automation.testapp.tests.TestFactory</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="addToWatchList">
+                  </a> <!-- addToWatchList -->
+                  <span class="method-name">addToWatchList</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-RunAll_Test-class-skipped -->
           <div class="suite-RunAll_Test-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -140,12 +169,25 @@
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;RunAll Test&quot;&gt;
-  &lt;test name=&quot;RunTest&quot;&gt;
+&lt;suite thread-count=&quot;2&quot; name=&quot;RunAll Test&quot; parallel=&quot;tests&quot;&gt;
+  &lt;test name=&quot;Test-Samsung&quot;&gt;
+    &lt;parameter name=&quot;browserName&quot; value=&quot;Chrome&quot;/&gt;
+    &lt;parameter name=&quot;version&quot; value=&quot;4.4.2&quot;/&gt;
+    &lt;parameter name=&quot;platform&quot; value=&quot;Android&quot;/&gt;
+    &lt;parameter name=&quot;deviceName_&quot; value=&quot;004f0435&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.automation.testapp.tests.TestFactory&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- RunTest --&gt;
+  &lt;/test&gt; &lt;!-- Test-Samsung --&gt;
+  &lt;test name=&quot;Test-Huaweii&quot;&gt;
+    &lt;parameter name=&quot;browserName&quot; value=&quot;Chrome&quot;/&gt;
+    &lt;parameter name=&quot;version&quot; value=&quot;5.1&quot;/&gt;
+    &lt;parameter name=&quot;platform&quot; value=&quot;Android&quot;/&gt;
+    &lt;parameter name=&quot;deviceName_&quot; value=&quot;021YHB2133086676&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.automation.testapp.tests.TestFactory&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Test-Huaweii --&gt;
 &lt;/suite&gt; &lt;!-- RunAll Test --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -157,7 +199,10 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">RunTest (1 class)</span>
+                <span class="test-name">Test-Samsung (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Test-Huaweii (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -183,16 +228,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'addToWatchList')
 data.setCell(0, 2, 'com.automation.testapp.tests.TestFactory')
-data.setCell(0, 3, 29587);
+data.setCell(0, 3, 42250);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'addToWatchList')
+data.setCell(1, 2, 'com.automation.testapp.tests.TestFactory')
+data.setCell(1, 3, 6);
 window.suiteTableData['RunAll_Test']= { tableData: data, tableDiv: 'times-div-RunAll_Test'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 29 seconds</span>
+              <span class="suite-total-time">Total running time: 42 seconds</span>
               <div id="times-div-RunAll_Test">
               </div> <!-- times-div-RunAll_Test -->
             </div> <!-- times-div -->
@@ -219,22 +268,32 @@ return data;
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
               <div class="chronological-class-name">com.automation.testapp.tests.TestFactory</div> <!-- chronological-class-name -->
-              <div class="configuration-suite before">
-                <span class="method-name">AndroidDriverSet</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-suite before -->
               <div class="configuration-test before">
-                <span class="method-name">setClass</span>
-                <span class="method-start">69718 ms</span>
+                <span class="method-name">AndroidDriverSet(021YHB2133086676, Chrome, Android, 5.1)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="configuration-test before">
+                <span class="method-name">AndroidDriverSet(004f0435, Chrome, Android, 4.4.2)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="configuration-test before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">before</span>
+                <span class="method-start">8915 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="configuration-test before">
+                <span class="method-name">before</span>
+                <span class="method-start">9122 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">addToWatchList</span>
-                <span class="method-start">103277 ms</span>
+                <span class="method-start">63621 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">WebDriverQuit</span>
-                <span class="method-start">132868 ms</span>
-              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">addToWatchList</span>
+                <span class="method-start">84738 ms</span>
+              </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

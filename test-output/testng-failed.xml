@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [RunAll Test]">
-  <test name="RunTest(failed)">
+<suite thread-count="2" name="Failed suite [RunAll Test]" parallel="tests">
+  <parameter name="browserName" value="Chrome"/>
+  <parameter name="version" value="5.1"/>
+  <parameter name="platform" value="Android"/>
+  <parameter name="deviceName_" value="021YHB2133086676"/>
+  <test name="Test-Samsung(failed)" parallel="tests">
+    <parameter name="browserName" value="Chrome"/>
+    <parameter name="version" value="4.4.2"/>
+    <parameter name="platform" value="Android"/>
+    <parameter name="deviceName_" value="004f0435"/>
     <classes>
       <class name="com.automation.testapp.tests.TestFactory">
         <methods>
-          <include name="WebDriverQuit"/>
           <include name="AndroidDriverSet"/>
-          <include name="setClass"/>
+          <include name="AndroidDriverSet"/>
+          <include name="before"/>
+          <include name="before"/>
           <include name="addToWatchList"/>
         </methods>
       </class> <!-- com.automation.testapp.tests.TestFactory -->
     </classes>
-  </test> <!-- RunTest(failed) -->
+  </test> <!-- Test-Samsung(failed) -->
 </suite> <!-- Failed suite [RunAll Test] -->

@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.automation.testapp.TestFactory">
+      <class name="com.automation.testapp.tests.TestFactory">
         <methods>
-          <include name="rateAMovie"/>
           <include name="AndroidDriverSet"/>
+          <include name="setClass"/>
+          <include name="addToWatchList"/>
         </methods>
-      </class> <!-- com.automation.testapp.TestFactory -->
+      </class> <!-- com.automation.testapp.tests.TestFactory -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -6,9 +6,6 @@ import org.testng.Assert;
 
 import com.automation.testapp.base.BasePage;
 
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.android.AndroidDriver;
-
 public class SearchPage extends BasePage {
 
 	private static SearchPage instance;

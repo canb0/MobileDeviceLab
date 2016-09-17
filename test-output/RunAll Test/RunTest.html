@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>RunTest</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Jul 25 16:24:23 EEST 2016</td>
+<td>Started on:</td><td>Sat Jul 30 12:08:46 EEST 2016</td>
 </tr>
-<tr><td>Total time:</td><td>64 seconds (64073 ms)</td>
+<tr><td>Total time:</td><td>84 seconds (84110 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,8 +67,8 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
@@ -76,8 +76,51 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='com.automation.testapp.tests.TestFactory.addToWatchList()'><b>addToWatchList</b><br>Test class: com.automation.testapp.tests.TestFactory</td>
-<td></td>
-<td>29</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Timed out after 10 seconds waiting for presence of any elements located by By.name: Not in watchlist
+Build info: version: &apos;2.50.1&apos;, revision: &apos;d7fc91b29de65b790abb01f3ac5f7ea2191c88a7&apos;, time: &apos;2016-01-29 11:11:26&apos;
+System info: host: &apos;CanberKeytorc&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities [{app=/tmp/apks-Samsung_Google_Nexus_10_P8110_real/com.imdb.mobile.apk, networkConnectionEnabled=true, testobject_app_id=1, testobject_test_report_url=https://app.testobject.com/#/canberkakduygu/imdb/appium/executions/81, warnings={}, testobject_device=Samsung_Google_Nexus_10_P8110_real, testobject_device_session_id={value=dd92bf96-1707-4b5f-a0f1-7b22daf0b2ff}, databaseEnabled=false, deviceName=R32D10037TA, platform=LINUX, desired={app=/tmp/apks-Samsung_Google_Nexus_10_P8110_real/com.imdb.mobile.apk, testobject_app_id=1, testobject_device=Samsung_Google_Nexus_10_P8110_real, testobject_api_key=B934163327E64391994877AD2CDA53EA, platformName=Android, deviceName=Samsung_Google_Nexus_10_P8110_real}, platformVersion=5.1.1, webStorageEnabled=false, locationContextEnabled=false, browserName=Android, takesScreenshot=true, javascriptEnabled=true, testobject_api_key=B934163327E64391994877AD2CDA53EA, platformName=Android, testobject_test_live_view_url=https://app.testobject.com/#/canberkakduygu/imdb/appium/view/81}]
+Session ID: ae643ba3-698d-4189-82b3-9e0c58a105a7
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:261)
+	at com.automation.testapp.base.BasePageUtil.waitForVisibility(BasePageUtil.java:38)
+	at com.automation.testapp.base.BasePageUtil.findElement(BasePageUtil.java:55)
+	at com.automation.testapp.base.BasePageUtil.clickElement(BasePageUtil.java:74)
+	at com.automation.testapp.pages.MoviePage.addWatchList(MoviePage.java:33)
+	at com.automation.testapp.tests.TestFactory.addToWatchList(TestFactory.java:33)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1774186430", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1774186430'><pre>org.openqa.selenium.TimeoutException: Timed out after 10 seconds waiting for presence of any elements located by By.name: Not in watchlist
+Build info: version: &apos;2.50.1&apos;, revision: &apos;d7fc91b29de65b790abb01f3ac5f7ea2191c88a7&apos;, time: &apos;2016-01-29 11:11:26&apos;
+System info: host: &apos;CanberKeytorc&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities [{app=/tmp/apks-Samsung_Google_Nexus_10_P8110_real/com.imdb.mobile.apk, networkConnectionEnabled=true, testobject_app_id=1, testobject_test_report_url=https://app.testobject.com/#/canberkakduygu/imdb/appium/executions/81, warnings={}, testobject_device=Samsung_Google_Nexus_10_P8110_real, testobject_device_session_id={value=dd92bf96-1707-4b5f-a0f1-7b22daf0b2ff}, databaseEnabled=false, deviceName=R32D10037TA, platform=LINUX, desired={app=/tmp/apks-Samsung_Google_Nexus_10_P8110_real/com.imdb.mobile.apk, testobject_app_id=1, testobject_device=Samsung_Google_Nexus_10_P8110_real, testobject_api_key=B934163327E64391994877AD2CDA53EA, platformName=Android, deviceName=Samsung_Google_Nexus_10_P8110_real}, platformVersion=5.1.1, webStorageEnabled=false, locationContextEnabled=false, browserName=Android, takesScreenshot=true, javascriptEnabled=true, testobject_api_key=B934163327E64391994877AD2CDA53EA, platformName=Android, testobject_test_live_view_url=https://app.testobject.com/#/canberkakduygu/imdb/appium/view/81}]
+Session ID: ae643ba3-698d-4189-82b3-9e0c58a105a7
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:261)
+	at com.automation.testapp.base.BasePageUtil.waitForVisibility(BasePageUtil.java:38)
+	at com.automation.testapp.base.BasePageUtil.findElement(BasePageUtil.java:55)
+	at com.automation.testapp.base.BasePageUtil.clickElement(BasePageUtil.java:74)
+	at com.automation.testapp.pages.MoviePage.addWatchList(MoviePage.java:33)
+	at com.automation.testapp.tests.TestFactory.addToWatchList(TestFactory.java:33)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>34</td>
 <td>com.automation.testapp.tests.TestFactory@13c78c0b</td></tr>
 </table><p>
 </body>

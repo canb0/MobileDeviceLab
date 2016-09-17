@@ -1,10 +1,7 @@
 package com.automation.testapp.base;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
-
-import io.appium.java_client.AppiumDriver;
 
 public class BasePage extends BasePageUtil {
 
@@ -13,9 +10,6 @@ public class BasePage extends BasePageUtil {
 		super(driver);
 	}
 
-	protected void LoadHomePage() {
-
-	}
 
 	protected void openHamburgerMenu() {
 

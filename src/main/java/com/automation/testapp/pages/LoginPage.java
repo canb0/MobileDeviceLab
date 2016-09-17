@@ -30,10 +30,9 @@ public class LoginPage extends BasePage {
 
 	public void loginWithImdbAccount() {
 		clickElement(By.name("IMDb"), 0);
-		List<WebElement> elements = findElementsByClass("android.widget.EditText");
+		List<WebElement> elements = findElements(By.className("android.widget.EditText"));
 		elements.get(0).sendKeys(testappConf.getUserName());
 		elements.get(1).sendKeys(testappConf.getPassword());
-		//else presenet not hidekeyboard
 		if(!isElementPresent(By.name("android.widget.Button")))
 			hideKeyboard();
 		clickElement(By.name("Sign In "), 0);

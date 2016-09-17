@@ -6,8 +6,6 @@ import org.testng.Assert;
 
 import com.automation.testapp.base.BasePage;
 
-import io.appium.java_client.AppiumDriver;
-
 public class HomePage extends BasePage {
 
 	private static HomePage instance;
@@ -32,11 +30,10 @@ public class HomePage extends BasePage {
 	}
 
 	public LoginPage openLoginPage() {
-		if (!isElementPresent(By.name("Sign in to IMDb")))
-			openHamburgerMenu();
-
+		//if (!isElementPresent(By.name("Sign in to IMDb")))
+		openHamburgerMenu();
 		clickElement(By.name("Sign in to IMDb"), 0);
-		return LoginPage.GetInstance(driver);
+		return new LoginPage(driver);
 	}
 
 	public SearchPage searchMovie() {
@@ -44,7 +41,7 @@ public class HomePage extends BasePage {
 		sendKey(By.name("   Search IMDb"), 0, testappConf.getMovieName() + "\n");
 		Assert.assertTrue(getText(By.id("com.imdb.mobile:id/label"), 0)
 				.contains(testappConf.getMovieName()));
-		return SearchPage.GetInstance(driver);
+		return new SearchPage(driver);
 
 	}
 

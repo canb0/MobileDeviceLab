@@ -1,29 +1,128 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="1" failed="0" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="RunAll Test" duration-ms="64073" started-at="2016-07-25T13:24:23Z" finished-at="2016-07-25T13:25:27Z">
+  <suite name="RunAll Test" duration-ms="127006" started-at="2016-09-17T14:52:21Z" finished-at="2016-09-17T14:54:28Z">
     <groups>
     </groups>
-    <test name="RunTest" duration-ms="64073" started-at="2016-07-25T13:24:23Z" finished-at="2016-07-25T13:25:27Z">
+    <test name="Test-Samsung" duration-ms="63649" started-at="2016-09-17T14:52:21Z" finished-at="2016-09-17T14:53:25Z">
       <class name="com.automation.testapp.tests.TestFactory">
-        <test-method status="PASS" signature="AndroidDriverSet()[pri:0, instance:com.automation.testapp.tests.TestFactory@13c78c0b]" name="AndroidDriverSet" is-config="true" duration-ms="69713" started-at="2016-07-25T16:23:13Z" finished-at="2016-07-25T16:24:23Z">
+        <test-method status="PASS" signature="AndroidDriverSet(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.automation.testapp.tests.TestFactory@6b143ee9]" name="AndroidDriverSet" is-config="true" duration-ms="8915" started-at="2016-09-17T17:52:21Z" finished-at="2016-09-17T17:52:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[004f0435]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Android]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[4.4.2]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AndroidDriverSet -->
-        <test-method status="PASS" signature="setClass()[pri:0, instance:com.automation.testapp.tests.TestFactory@13c78c0b]" name="setClass" is-config="true" duration-ms="33536" started-at="2016-07-25T16:24:23Z" finished-at="2016-07-25T16:24:56Z">
+        <test-method status="FAIL" signature="before()[pri:0, instance:com.automation.testapp.tests.TestFactory@6b143ee9]" name="before" is-config="true" duration-ms="0" started-at="2016-09-17T17:52:30Z" depends-on-methods="base.BaseTest.AndroidDriverSet" finished-at="2016-09-17T17:52:30Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Timed out after 20 seconds waiting for visibility of all elements located by By.id: com.imdb.mobile:id/text
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'CanberKeytorc', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=com.imdb.mobile, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, deviceName=004f0435, version=4.4.2, platform=LINUX, appActivity=com.imdb.mobile.HomeActivity, desired={appPackage=com.imdb.mobile, appActivity=com.imdb.mobile.HomeActivity, platformName=Android, deviceName=004f0435, device=004f0435, version=4.4.2}, platformVersion=4.4.2, webStorageEnabled=false, locationContextEnabled=false, browserName=Android, takesScreenshot=true, javascriptEnabled=true, platformName=Android, device=004f0435}]
+Session ID: 1667ddc1-4218-4b95-9b62-8b4ceb9c7807]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Timed out after 20 seconds waiting for visibility of all elements located by By.id: com.imdb.mobile:id/text
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'CanberKeytorc', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=com.imdb.mobile, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, deviceName=004f0435, version=4.4.2, platform=LINUX, appActivity=com.imdb.mobile.HomeActivity, desired={appPackage=com.imdb.mobile, appActivity=com.imdb.mobile.HomeActivity, platformName=Android, deviceName=004f0435, device=004f0435, version=4.4.2}, platformVersion=4.4.2, webStorageEnabled=false, locationContextEnabled=false, browserName=Android, takesScreenshot=true, javascriptEnabled=true, platformName=Android, device=004f0435}]
+Session ID: 1667ddc1-4218-4b95-9b62-8b4ceb9c7807
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:261)
+	at com.automation.testapp.base.BasePageUtil.waitForVisibility(BasePageUtil.java:54)
+	at com.automation.testapp.base.BasePageUtil.getText(BasePageUtil.java:63)
+	at com.automation.testapp.pages.LoginPage.loginWithImdbAccount(LoginPage.java:39)
+	at com.automation.testapp.tests.TestFactory.before(TestFactory.java:26)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:641)
+	at org.testng.TestRunner.run(TestRunner.java:609)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:37)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:368)
+	at org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setClass -->
-        <test-method status="PASS" signature="addToWatchList()[pri:0, instance:com.automation.testapp.tests.TestFactory@13c78c0b]" name="addToWatchList" duration-ms="29587" started-at="2016-07-25T16:24:56Z" finished-at="2016-07-25T16:25:26Z">
+        </test-method> <!-- before -->
+        <test-method status="SKIP" signature="addToWatchList()[pri:0, instance:com.automation.testapp.tests.TestFactory@6b143ee9]" name="addToWatchList" duration-ms="6" started-at="2016-09-17T17:53:25Z" finished-at="2016-09-17T17:53:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addToWatchList -->
-        <test-method status="PASS" signature="WebDriverQuit()[pri:0, instance:com.automation.testapp.tests.TestFactory@13c78c0b]" name="WebDriverQuit" is-config="true" duration-ms="915" started-at="2016-07-25T16:25:26Z" finished-at="2016-07-25T16:25:27Z">
+      </class> <!-- com.automation.testapp.tests.TestFactory -->
+    </test> <!-- Test-Samsung -->
+    <test name="Test-Huaweii" duration-ms="127006" started-at="2016-09-17T14:52:21Z" finished-at="2016-09-17T14:54:28Z">
+      <class name="com.automation.testapp.tests.TestFactory">
+        <test-method status="PASS" signature="AndroidDriverSet(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.automation.testapp.tests.TestFactory@32e6e9c3]" name="AndroidDriverSet" is-config="true" duration-ms="9122" started-at="2016-09-17T17:52:21Z" finished-at="2016-09-17T17:52:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[021YHB2133086676]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Android]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[5.1]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- WebDriverQuit -->
+        </test-method> <!-- AndroidDriverSet -->
+        <test-method status="PASS" signature="before()[pri:0, instance:com.automation.testapp.tests.TestFactory@32e6e9c3]" name="before" is-config="true" duration-ms="75615" started-at="2016-09-17T17:52:30Z" depends-on-methods="base.BaseTest.AndroidDriverSet" finished-at="2016-09-17T17:53:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method status="PASS" signature="addToWatchList()[pri:0, instance:com.automation.testapp.tests.TestFactory@32e6e9c3]" name="addToWatchList" duration-ms="42250" started-at="2016-09-17T17:53:46Z" finished-at="2016-09-17T17:54:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addToWatchList -->
       </class> <!-- com.automation.testapp.tests.TestFactory -->
-    </test> <!-- RunTest -->
+    </test> <!-- Test-Huaweii -->
   </suite> <!-- RunAll Test -->
 </testng-results>

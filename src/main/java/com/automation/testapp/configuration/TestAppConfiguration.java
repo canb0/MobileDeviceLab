@@ -7,22 +7,14 @@ public class TestAppConfiguration {
 
 	private static TestAppConfiguration instance;
 	private static Object lock = new Object();
-	private String deviceName;
-	private String capabilityVersion;
-	private String platformName;
 	private String appActivity;
 	private String appPackage;
 	private String standartID;
-	private String fileName;
 	private String appiumURL;
 	private String movieName;
 	private String userName;
 	private String password;
 	private String user;
-	private String testobjectURL;
-	private String apikey;
-	private String appid;
-	private String device;
 
 	private TestAppConfiguration() {
 	}
@@ -49,34 +41,17 @@ public class TestAppConfiguration {
 		} catch (IOException e) {
 			System.out.println("Properties file cannot be found");
 		}
-		deviceName = prop.getProperty("deviceName");
-		capabilityVersion = prop.getProperty("capabilityVersion");
-		platformName = prop.getProperty("platformName");
+		;
 		appPackage = prop.getProperty("appPackage");
-		fileName = prop.getProperty("fileName");
 		appiumURL = prop.getProperty("appiumURL");
 		appActivity = prop.getProperty("appActivity");
 		movieName = prop.getProperty("movieName");
 		userName = prop.getProperty("userName");
 		password = prop.getProperty("password");
 		user = prop.getProperty("user");
-		testobjectURL= prop.getProperty("testobjectURL");
-		apikey= prop.getProperty("apikey");
-		appid= prop.getProperty("appid");
-		device= prop.getProperty("device");
 	}
 
-	public String getDeviceName() {
-		return deviceName;
-	}
 
-	public String getCapabilityVersion() {
-		return capabilityVersion;
-	}
-
-	public String getPlatformName() {
-		return platformName;
-	}
 
 	public String getAppActivity() {
 		return appActivity;
@@ -90,9 +65,7 @@ public class TestAppConfiguration {
 		return standartID;
 	}
 
-	public String getFileName() {
-		return fileName;
-	}
+	
 
 	public String getAppiumURL() {
 		return appiumURL;
@@ -113,21 +86,4 @@ public class TestAppConfiguration {
 	public String getUser() {
 		return user;
 	}
-
-	public String getTestobjectURL() {
-		return testobjectURL;
-	}
-
-	public String getApikey() {
-		return apikey;
-	}
-
-	public String getAppid() {
-		return appid;
-	}
-
-	public String getDevice() {
-		return device;
-	}
-
 }
