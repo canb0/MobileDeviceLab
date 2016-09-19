@@ -1,3 +1,3 @@
-# Mobile Test Automation - Basic Cloud
-In order to run this demo, you need to install iimdb.apk to your mobile device
-And configure *.bat file under SeleniumGrid folder.
+# Mobile Test Automation - Basic Mobile Device Lab
+In order to run this demo, you need to install IMDB application to your mobile device
+and configure *.bat file under SeleniumGrid folder.

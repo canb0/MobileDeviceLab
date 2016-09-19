@@ -10,22 +10,8 @@ import com.automation.testapp.base.BasePage;
 
 public class LoginPage extends BasePage {
 
-	private static LoginPage instance;
-	protected static Object lock = new Object();
-
 	public LoginPage(RemoteWebDriver driver) {
 		super(driver);
-	}
-
-	public static LoginPage GetInstance(RemoteWebDriver driver) {
-		if (instance == null) {
-			synchronized (lock) {
-				if (instance == null) {
-					instance = new LoginPage(driver);
-				}
-			}
-		}
-		return instance;
 	}
 
 	public void loginWithImdbAccount() {

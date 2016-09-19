@@ -8,22 +8,8 @@ import com.automation.testapp.base.BasePage;
 
 public class MoviePage extends BasePage {
 
-	private static MoviePage instance;
-	protected static Object lock = new Object();
-
 	public MoviePage(RemoteWebDriver driver) {
 		super(driver);
-	}
-
-	public static MoviePage GetInstance(RemoteWebDriver driver) {
-		if (instance == null) {
-			synchronized (lock) {
-				if (instance == null) {
-					instance = new MoviePage(driver);
-				}
-			}
-		}
-		return instance;
 	}
 
 	public WatchListPage addWatchList() {
@@ -32,7 +18,7 @@ public class MoviePage extends BasePage {
 			Assert.assertTrue(true, "Element is added to watch list");
 		else
 			Assert.assertTrue(false,"Element is added to watch list");
-		return WatchListPage.GetInstance(driver);
+		return new WatchListPage(driver);
 		
 	}
 

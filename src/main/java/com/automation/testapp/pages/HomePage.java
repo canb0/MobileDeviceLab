@@ -8,29 +8,12 @@ import com.automation.testapp.base.BasePage;
 
 public class HomePage extends BasePage {
 
-	private static HomePage instance;
-	protected static Object lock = new Object();
-
 	public HomePage(RemoteWebDriver driver) {
 		super(driver);
 	}
 
-	public static HomePage GetInstance(RemoteWebDriver driver) {
-		if (instance == null) {
-			synchronized (lock) {
-				if (instance == null) {
-					instance = new HomePage(driver);
-
-				}
-			}
-		}
-
-		return instance;
-
-	}
-
 	public LoginPage openLoginPage() {
-		//if (!isElementPresent(By.name("Sign in to IMDb")))
+		if (!isElementPresent(By.name("Sign in to IMDb")))
 		openHamburgerMenu();
 		clickElement(By.name("Sign in to IMDb"), 0);
 		return new LoginPage(driver);
